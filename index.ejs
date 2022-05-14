@@ -1,0 +1,54 @@
+<!-- DO NOT MODIFY THIS FILE -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Stock Tracker</title>
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+
+<body>
+    <h1>Welcome to Your Stock Tracker</h1>
+    <img id="img" src="/images/stonk.jpg" alt="Not Found" class="image" /><br />
+    <hr> 
+    <h2>Add Info:</h2>
+    <fieldset>
+        <form action="http://localhost:<%- port %>/processApplication" method="post">
+            <strong>Name: </strong><input type="text" name="name" id="name" required />
+            <br /><br />
+            <strong>Email Address: </strong><input type="text" name="email" id="email" required />
+            <br /><br />
+            <strong>Favorite Stock: </strong><input type="text" name="stock" id="stock" required />
+            <br /><br />
+            <input type="reset" value="Clear Form" /> <input type="submit" value="Add" />
+        </form>
+
+    </fieldset>
+    <hr>
+    <h2>Search By Name:</h2>
+    <fieldset>
+        <form action="http://localhost:<%- port %>/processLookUp" method="post">
+            <strong>Search by Name: </strong><input type="text" name="name" id="name" required />
+            <br /><br />
+            <input type="reset" value="Clear Form" /> <input type="submit" value="Lookup" />
+        </form>
+    </fieldset>
+    <hr>
+    <h2>Search By Stock:</h2>
+    <fieldset>
+        <form action="http://localhost:<%- port %>/processStock" method="post">
+            <strong>Search by Stock: </strong><input type="text" name="stock" id="stock" required />
+            <br /><br />
+            <input type="reset" value="Clear Form" /> <input type="submit" value="Lookup" />
+        </form>
+    </fieldset>
+    <hr>
+    <h2>Remove:</h2>
+    <fieldset>
+        Click <a href="/remove">here</a> to remove all users.
+    </fieldset>
+    <br />
+</body>
+
+</html>

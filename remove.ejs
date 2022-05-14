@@ -1,0 +1,31 @@
+<!-- DO NOT MODIFY THIS FILE -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Remove</title>
+</head>
+
+<body>
+    <h1>Removing All Users</h1>
+    <form action="http://localhost:<%- port %>/processRemove" method="post">
+        <input type="submit" value="Remove all users" />
+    </form>
+    <hr>
+    <a href="/">HOME</a>
+</body>
+
+</html>
+
+<script defer>
+    window.onsubmit = validateForm;
+
+    function validateForm() {
+
+        let valuesProvided = "Are you sure you want to remove all users?";
+        return window.confirm(valuesProvided)
+
+    }
+
+</script>
